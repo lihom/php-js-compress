@@ -11,7 +11,7 @@ Compress JS files and minify by google closure-compiler.
 ```
 
 ###Relative link example
-
+You need input host.
 ```
 <script src="/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>	
 <script src="/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
