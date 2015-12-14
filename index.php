@@ -1,4 +1,7 @@
 <?php
+	error_reporting(0);
+	ini_set('display_errors', 0);
+
 	if (isset($_POST['code'])) {
 		$code = $_POST['code'];
 	}
@@ -9,11 +12,11 @@
 		$host = '';
 	}
 
-	if (isset($code)) {
+	if (isset($code) && !empty($code)) {
 		$host = !empty($host) ? rtrim($host, '/') . '/' : '';
-		$result = preg_match_all('/src=(["\'])(.*?)\1/', $code, $match);
+		$result = preg_match_all('/src=(["\'])(.*?\.js)\1/', $code, $match);
 		$paths = array();
-		if ($result !== FALSE) {
+		if ($result) {
 			$_js = $js = $__js =  '';
 			foreach ($match[2] as $k => $v) {
 				$url = $host . ltrim($v, '/');
