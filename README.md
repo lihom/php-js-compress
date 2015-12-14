@@ -1,7 +1,7 @@
 PHP JS Compress
 ======
 
-Compress JS files and minify by google closure-compiler.
+Compress JS files and minify with google closure-compiler.
 
 ###Basic example
 
